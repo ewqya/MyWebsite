@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.list-group-item {
+    font-size: 18px;
+}
+
+button {
+    width: 100%;
+}
