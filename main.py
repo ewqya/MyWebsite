@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
+import os
 
 app = Flask(__name__)
 
@@ -85,5 +86,7 @@ def users():
 def services():
     return render_template('services.html')
 
+# 主函数，适配 Railway
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.getenv("PORT", 5000))  # Railway 动态分配端口
+    app.run(host="0.0.0.0", port=port)
